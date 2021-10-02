@@ -16,7 +16,7 @@ public class DisplayFolder : MonoBehaviour
     int numberOfColumns = 10;
 
     [SerializeField]
-    FolderObject folder;
+    GameObject folderPrefab;
 
     [SerializeField]
     int xStart = 175;
@@ -28,7 +28,12 @@ public class DisplayFolder : MonoBehaviour
     float yStartOffset;
 
 
-    List<FolderContent> content;
+    List<GameObject> folderContent;
+
+    private void Awake()
+    {
+        folderContent = folderPrefab.GetComponent<FolderObject>().folderContent;
+    }
 
     void Start()
     {
@@ -50,11 +55,11 @@ public class DisplayFolder : MonoBehaviour
 
     private void CreateDisplay()
     {
-        for (int i = 0; i < folder.folderContent.Count; i++)
+        for (int i = 0; i < folderContent.Count; i++)
         {
-            var obj = Instantiate(folder.folderContent[i].prefab, Vector3.zero, Quaternion.identity, transform);
+            var obj = Instantiate(folderContent[i], Vector3.zero, Quaternion.identity, transform);
             obj.GetComponent<RectTransform>().localPosition = GetPosition(i);
-            obj.GetComponentInChildren<TextMeshProUGUI>().text = folder.folderContent[i].objectName;
+            obj.GetComponentInChildren<TextMeshProUGUI>().text = folderContent[i].GetComponent<FileSystemObject>().objectName;
         }
     }
 

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 962179077527461240}
   - component: {fileID: 3112604644265291615}
   - component: {fileID: -1998855537877883296}
+  - component: {fileID: 8013846806151990872}
   m_Layer: 5
   m_Name: Folder
   m_TagString: Untagged
@@ -102,6 +103,26 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &8013846806151990872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1691371761508075653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04bcd98a4177eb245890287bfa72c634, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectName: Test Folder
+  folderContent:
+  - {fileID: 6765947138433804588, guid: 57bf77839689a484295733c696e3dc19, type: 3}
+  - {fileID: 5863394986606434502, guid: 5ad3db822d9a4684e99740a24085949f, type: 3}
+  - {fileID: 1691371761508075653}
+  - {fileID: 1691371761508075653}
+  - {fileID: 1691371761508075653}
+  - {fileID: 5863394986606434502, guid: 5ad3db822d9a4684e99740a24085949f, type: 3}
 --- !u!1 &8432943040445351219
 GameObject:
   m_ObjectHideFlags: 0

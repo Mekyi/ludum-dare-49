@@ -580,7 +580,7 @@ MonoBehaviour:
   horizontalSpacing: 175
   verticalSpacing: 175
   numberOfColumns: 7
-  folder: {fileID: 11400000, guid: e10a43e881481f542af45ca001b481ee, type: 2}
+  folderPrefab: {fileID: 1691371761508075653, guid: 6cc64287d7cc472479427c31b89b0600, type: 3}
   xStart: 110
   yStart: 110
 --- !u!114 &1992829548
