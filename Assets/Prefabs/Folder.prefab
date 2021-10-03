@@ -112,17 +112,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1691371761508075653}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04bcd98a4177eb245890287bfa72c634, type: 3}
+  m_Script: {fileID: 11500000, guid: 94b71e68bbc8c5943ba6b61f06c857ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectName: Test Folder
+  type: 1
+  objectName: Folder
   folderContent:
+  - {fileID: 1691371761508075653}
+  - {fileID: 5863394986606434502, guid: 5ad3db822d9a4684e99740a24085949f, type: 3}
   - {fileID: 6765947138433804588, guid: 57bf77839689a484295733c696e3dc19, type: 3}
-  - {fileID: 5863394986606434502, guid: 5ad3db822d9a4684e99740a24085949f, type: 3}
+  - {fileID: 6765947138433804588, guid: 57bf77839689a484295733c696e3dc19, type: 3}
   - {fileID: 1691371761508075653}
   - {fileID: 1691371761508075653}
-  - {fileID: 1691371761508075653}
-  - {fileID: 5863394986606434502, guid: 5ad3db822d9a4684e99740a24085949f, type: 3}
+  newFileSystemObjectPrefab: {fileID: 1691371761508075653}
 --- !u!1 &8432943040445351219
 GameObject:
   m_ObjectHideFlags: 0

@@ -26,6 +26,11 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
 
     public void OnDrag(PointerEventData eventData)
     {
+        if (GetComponent<FileSystemObject>().GetFileSystemType() == FileSystemType.Empty)
+        {
+            eventData.pointerDrag = null;
+            return;
+        }
         rectTransform.anchoredPosition += eventData.delta;
     }
 
@@ -42,10 +47,33 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
 
     public void OnDrop(PointerEventData eventData)
     {
-        if (eventData.pointerDrag != null)
+        FileSystemObject fileSystemObject = GetComponent<FileSystemObject>();
+
+        if (fileSystemObject == null || eventData.pointerDrag == null)
+        {
+            return;
+        }
+
+        if (fileSystemObject.GetFileSystemType() == FileSystemType.Folder)
+        {
+            GameObject draggedObject = eventData.pointerDrag;
+            FileSystemObject fileSystemProperties = draggedObject.GetComponent<FileSystemObject>();
+
+            fileSystemObject.AddFileSystemObject(
+                fileSystemProperties.objectName,
+                fileSystemProperties.GetFileSystemType(),
+                newFolderContent: fileSystemProperties.folderContent
+            );
+            Destroy(draggedObject);
+        }
+        else if (fileSystemObject.GetFileSystemType() == FileSystemType.Empty)
         {
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
             GetComponent<RectTransform>().anchoredPosition = eventData.pointerDrag.GetComponent<DragAndDrop>().GetLastPosition();
+        }
+        else
+        {
+            eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = eventData.pointerDrag.GetComponent<DragAndDrop>().GetLastPosition();
         }
     }
 

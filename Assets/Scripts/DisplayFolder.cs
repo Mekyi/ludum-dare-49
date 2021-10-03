@@ -32,7 +32,7 @@ public class DisplayFolder : MonoBehaviour
 
     private void Awake()
     {
-        folderContent = folderPrefab.GetComponent<FolderObject>().folderContent;
+        folderContent = folderPrefab.GetComponent<FileSystemObject>().folderContent;
     }
 
     void Start()

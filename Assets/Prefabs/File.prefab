@@ -246,7 +246,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6765947138433804588}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1025d25543dc94f4b903e28dafed3892, type: 3}
+  m_Script: {fileID: 11500000, guid: 94b71e68bbc8c5943ba6b61f06c857ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectName: Test File
+  type: 0
+  objectName: File
+  folderContent: []
+  newFilePrefab: {fileID: 6765947138433804588}
+  newFolderPrefab: {fileID: 1691371761508075653, guid: 6cc64287d7cc472479427c31b89b0600, type: 3}
