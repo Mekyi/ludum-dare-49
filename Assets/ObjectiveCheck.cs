@@ -17,7 +17,7 @@ public class ObjectiveCheck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.parent == goal.transform)
+        if (transform.parent.parent == goal.transform)
         {
             Destroy(todoLappu);
         }

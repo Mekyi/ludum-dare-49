@@ -8,7 +8,8 @@ public class TodoSystem : MonoBehaviour
 
     public int rng;
 
-    public GameObject theChosenOne;
+    [SerializeField]
+    GameObject theChosenOne;
     public GameObject mukarandom;
     public GameObject folderObject;
 
