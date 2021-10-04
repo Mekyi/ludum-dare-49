@@ -9,7 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2379766085380881471, guid: ccd38d40ed74ecd45b8a49c6003fa125, type: 3}
       propertyPath: m_Name
-      value: Post-it
+      value: Post-it_Pink
+      objectReference: {fileID: 0}
+    - target: {fileID: 2379766085380881471, guid: ccd38d40ed74ecd45b8a49c6003fa125, type: 3}
+      propertyPath: m_TagString
+      value: PostIt
       objectReference: {fileID: 0}
     - target: {fileID: 3048215711002814085, guid: ccd38d40ed74ecd45b8a49c6003fa125, type: 3}
       propertyPath: m_RootOrder

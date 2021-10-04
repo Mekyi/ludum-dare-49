@@ -53,7 +53,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3047973664776282758, guid: 7b0ddf028bb042740992483924d24f40, type: 3}
       propertyPath: m_Name
-      value: Post-it
+      value: Post-it_Orange
+      objectReference: {fileID: 0}
+    - target: {fileID: 3047973664776282758, guid: 7b0ddf028bb042740992483924d24f40, type: 3}
+      propertyPath: m_TagString
+      value: PostIt
       objectReference: {fileID: 0}
     - target: {fileID: 3552336896175883091, guid: 7b0ddf028bb042740992483924d24f40, type: 3}
       propertyPath: m_Materials.Array.data[0]
