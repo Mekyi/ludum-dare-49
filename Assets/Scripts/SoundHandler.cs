@@ -12,7 +12,7 @@ public class SoundHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        audio.Play(0);
+
     }
 
     // Update is called once per frame
@@ -29,11 +29,16 @@ public class SoundHandler : MonoBehaviour
         {
             audio.PlayOneShot(audioList[0]);
         }
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            audio.PlayOneShot(audioList[1]);
+        }
     }
 
     public void FolderOpen()
     {
-        audio.PlayOneShot(audioList[1]);
+        audio.PlayOneShot(audioList[2]);
     }
 
 }
