@@ -1398,9 +1398,21 @@ PrefabInstance:
       propertyPath: levelManager
       value: 
       objectReference: {fileID: 2000192684}
+    - target: {fileID: 1722689708697433946, guid: 1f6d7ddb34888f64daf1a5aeccf1a9d1, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722689708697433946, guid: 1f6d7ddb34888f64daf1a5aeccf1a9d1, type: 3}
+      propertyPath: m_FillMethod
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1722689709243220400, guid: 1f6d7ddb34888f64daf1a5aeccf1a9d1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722689709243220407, guid: 1f6d7ddb34888f64daf1a5aeccf1a9d1, type: 3}
+      propertyPath: m_Type
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1722689709288101384, guid: 1f6d7ddb34888f64daf1a5aeccf1a9d1, type: 3}
       propertyPath: m_AnchorMax.y
