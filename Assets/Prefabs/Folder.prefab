@@ -92,7 +92,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lastPosition: {x: 0, y: 0}
-  lastParent: {fileID: 0}
 --- !u!225 &-1998855537877883296
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -119,13 +118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   objectName: Folder
-  folderContent:
-  - {fileID: 1691371761508075653}
-  - {fileID: 5863394986606434502, guid: 5ad3db822d9a4684e99740a24085949f, type: 3}
-  - {fileID: 6765947138433804588, guid: 57bf77839689a484295733c696e3dc19, type: 3}
-  - {fileID: 6765947138433804588, guid: 57bf77839689a484295733c696e3dc19, type: 3}
-  - {fileID: 1691371761508075653}
-  - {fileID: 1691371761508075653}
+  folderContent: []
   newFileSystemObjectPrefab: {fileID: 1691371761508075653}
 --- !u!1 &8432943040445351219
 GameObject:

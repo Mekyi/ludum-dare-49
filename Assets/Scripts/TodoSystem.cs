@@ -62,8 +62,11 @@ public class TodoSystem : MonoBehaviour
 
     IEnumerator CreateTaskObject()
     {
-        Debug.Log("CreateTask");
-        CreateTask();
-        yield return new WaitForSeconds(10);
+        while (true)
+        {
+            Debug.Log("CreateTask");
+            CreateTask();
+            yield return new WaitForSeconds(Random.Range(10,20));
+        }
     }
 }
