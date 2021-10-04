@@ -9,7 +9,6 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
     RectTransform rectTransform;
     CanvasGroup canvasGroup;
     public Vector2 lastPosition;
-    public Transform lastParent;
 
     private void Awake()
     {
@@ -28,9 +27,6 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
         canvasGroup.alpha = .5f;
         canvasGroup.blocksRaycasts = false;
         lastPosition = GetComponent<RectTransform>().anchoredPosition;
-        lastParent = transform.parent;
-        Debug.Log(lastParent);
-        eventData.pointerDrag.transform.SetParent(GameObject.Find("DraggedObjectCanvas").transform);
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -67,7 +63,7 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
                 fileSystemProperties.objectName,
                 fileSystemProperties.GetFileSystemType(),
                 newFolderContent: fileSystemProperties.folderContent
-                
+
         );
             draggedObject.transform.parent = gameObject.transform;
             //Destroy(draggedObject);
@@ -79,8 +75,6 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
         }
         else
         {
-            eventData.pointerDrag.transform.SetParent(eventData.pointerDrag.GetComponent<DragAndDrop>().lastParent);
-            Debug.Log(lastParent.name);
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = eventData.pointerDrag.GetComponent<DragAndDrop>().lastPosition;
         }
     }
