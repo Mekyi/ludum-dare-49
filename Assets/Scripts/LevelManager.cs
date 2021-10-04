@@ -29,10 +29,15 @@ public class LevelManager : MonoBehaviour
     {
         if (GameObject.FindGameObjectsWithTag("PostIt").Length >= loseCondition)
         {
-            loseCanvasObject.SetActive(true);
-            Time.timeScale = 0f;
-            computerScreen.GetComponent<MeshRenderer>().material = loseScreenMaterial;
+            EndGame();
         }
+    }
+
+    public void EndGame()
+    {
+        loseCanvasObject.SetActive(true);
+        Time.timeScale = 0f;
+        computerScreen.GetComponent<MeshRenderer>().material = loseScreenMaterial;
     }
 
     public void RestartLevel()

@@ -37,6 +37,7 @@ public class ObjectiveCheck : MonoBehaviour
         if (transform.parent.parent.parent == goal.transform)
         {
             Destroy(todoLappu);
+            GameObject.FindGameObjectWithTag("Status Bar").GetComponent<StatusBar>().addTime();
             gameObject.SetActive(false);
         }
     }
