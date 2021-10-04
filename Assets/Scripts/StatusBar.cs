@@ -32,8 +32,8 @@ public class StatusBar : MonoBehaviour
 
     public void addTime()
     {
-        Life += 2;
-        Debug.Log("Added 2 life");
+        Life += 5;
+        Debug.Log("Added 5 life");
     }
 
     public void addTime(int i)

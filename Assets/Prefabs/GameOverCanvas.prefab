@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Get bluesreened noob!!!
+  m_text: Get bluesreened
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c4e526e0f3268a146a516d40040bb8db, type: 2}
   m_sharedMaterial: {fileID: 3952602399839228363, guid: c4e526e0f3268a146a516d40040bb8db, type: 2}

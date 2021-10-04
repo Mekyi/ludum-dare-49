@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/VeetiScene.unity
+    guid: aeda704e3ddb5ae4884b18fedbb865ef
   m_configObjects: {}

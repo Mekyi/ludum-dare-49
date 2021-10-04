@@ -66,7 +66,7 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
 
             );
 
-            if (draggedObject.tag != "Folder")
+            if (draggedObject.GetComponent<FileSystemObject>().type == FileSystemType.File)
             {
                 draggedObject.transform.parent = gameObject.transform;
             }
