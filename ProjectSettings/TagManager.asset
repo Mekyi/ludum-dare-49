@@ -7,7 +7,6 @@ TagManager:
   - FileSystemObject
   - Folder
   - PostIt
-  - File System Object
   layers:
   - Default
   - TransparentFX
