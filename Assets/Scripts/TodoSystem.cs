@@ -65,15 +65,15 @@ public class TodoSystem : MonoBehaviour
 
 
     }
-        
+
         IEnumerator CreateTaskObject()
         {
             while (true)
             {
-            Debug.Log("CreateTask");
-            CreateTask();
-            yield return new WaitForSeconds(Random.Range(2, 5));
-            }       
+                Debug.Log("CreateTask");
+                CreateTask();
+                yield return new WaitForSeconds(Random.Range(2, 5));
+            }
         }
 
         private int postittinrg()
