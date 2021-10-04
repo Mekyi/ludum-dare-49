@@ -8,7 +8,8 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
 {
     RectTransform rectTransform;
     CanvasGroup canvasGroup;
-    Vector2 lastPosition;
+    public Vector2 lastPosition;
+    public Transform lastParent;
 
     private void Awake()
     {
@@ -18,19 +19,22 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        canvasGroup.alpha = .5f;
-        canvasGroup.blocksRaycasts = false;
-        lastPosition = GetComponent<RectTransform>().anchoredPosition;
-        Debug.Log(lastPosition);
-    }
-
-    public void OnDrag(PointerEventData eventData)
-    {
         if (GetComponent<FileSystemObject>().GetFileSystemType() == FileSystemType.Empty)
         {
             eventData.pointerDrag = null;
             return;
         }
+
+        canvasGroup.alpha = .5f;
+        canvasGroup.blocksRaycasts = false;
+        lastPosition = GetComponent<RectTransform>().anchoredPosition;
+        lastParent = transform.parent;
+        Debug.Log(lastParent);
+        eventData.pointerDrag.transform.SetParent(GameObject.Find("DraggedObjectCanvas").transform);
+    }
+
+    public void OnDrag(PointerEventData eventData)
+    {
         rectTransform.anchoredPosition += eventData.delta;
     }
 
@@ -69,16 +73,13 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
         else if (fileSystemObject.GetFileSystemType() == FileSystemType.Empty)
         {
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
-            GetComponent<RectTransform>().anchoredPosition = eventData.pointerDrag.GetComponent<DragAndDrop>().GetLastPosition();
+            GetComponent<RectTransform>().anchoredPosition = eventData.pointerDrag.GetComponent<DragAndDrop>().lastPosition;
         }
         else
         {
-            eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = eventData.pointerDrag.GetComponent<DragAndDrop>().GetLastPosition();
+            eventData.pointerDrag.transform.SetParent(eventData.pointerDrag.GetComponent<DragAndDrop>().lastParent);
+            Debug.Log(lastParent.name);
+            eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = eventData.pointerDrag.GetComponent<DragAndDrop>().lastPosition;
         }
-    }
-
-    private Vector2 GetLastPosition()
-    {
-        return lastPosition;
     }
 }
