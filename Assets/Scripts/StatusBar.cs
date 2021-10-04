@@ -19,7 +19,7 @@ public class StatusBar : MonoBehaviour
     {
         if (Life >= 0 && Life <= 100)
         {
-            Life -= decay * Time.deltaTime * (difficulty*GameObject.FindGameObjectsWithTag("PostIt").Length+1);
+            Life -= decay * Time.fixedDeltaTime * (difficulty*GameObject.FindGameObjectsWithTag("PostIt").Length);
             //Debug.Log(Life);
         }
         else
