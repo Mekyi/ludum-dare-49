@@ -62,7 +62,7 @@ public class TodoSystem : MonoBehaviour
 
     IEnumerator CreateTaskObject()
     {
-        Debug.Log("CreateTask", this);
+        Debug.Log("CreateTask");
         CreateTask();
         yield return new WaitForSeconds(10);
     }

@@ -67,8 +67,10 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
                 fileSystemProperties.objectName,
                 fileSystemProperties.GetFileSystemType(),
                 newFolderContent: fileSystemProperties.folderContent
-            );
-            Destroy(draggedObject);
+                
+        );
+            draggedObject.transform.parent = gameObject.transform;
+            //Destroy(draggedObject);
         }
         else if (fileSystemObject.GetFileSystemType() == FileSystemType.Empty)
         {

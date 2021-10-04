@@ -26,9 +26,7 @@ public class ObjectiveCheck : MonoBehaviour
         goal = Instantiate(maalitaulu);
         int rng2 = Random.Range(0, nimilista.Length);
         goal.name = nimilista[rng2];
-        Debug.Log(nimilista[rng2]);
         goal.GetComponentInChildren<TextMeshProUGUI>().text = nimilista[rng2];
-        Debug.Log(nimilista[rng2]);
 
         todoLappu.GetComponentInChildren<TextMeshProUGUI>().text = "Move file " + this.gameObject.name + " to folder " + goal.gameObject.name;
     }
@@ -36,9 +34,10 @@ public class ObjectiveCheck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.parent.parent == goal.transform)
+        if (transform.parent.parent.parent == goal.transform)
         {
             Destroy(todoLappu);
+            gameObject.SetActive(false);
         }
     }
 }
