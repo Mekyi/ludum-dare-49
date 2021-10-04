@@ -12,7 +12,10 @@ public class FileSystemManager : MonoBehaviour
 
     private void Start()
     {
-        GameObject.Instantiate(mukarandom, canvas.transform);
-        GetComponentInChildren<ObjectiveCheck>().todoLappu = postilappu;
+        if (gameObject.name == "FolderManager(Clone)")
+        {
+            GameObject.Instantiate(mukarandom, canvas.transform);
+            GetComponentInChildren<ObjectiveCheck>().todoLappu = postilappu;
+        }
     }
 }

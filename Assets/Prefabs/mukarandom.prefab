@@ -269,5 +269,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goal: {fileID: 0}
-  maalitaulu: {fileID: 0}
+  maalitaulu: {fileID: 41986668880975794, guid: 4d5cacb0dac5a4e418727047179fc633, type: 3}
   todoLappu: {fileID: 0}
