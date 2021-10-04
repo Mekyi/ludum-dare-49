@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8013846806151990872}
   m_Layer: 5
   m_Name: Folder
-  m_TagString: Untagged
+  m_TagString: File System Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -91,6 +91,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f6f738d51c632c4787a7403455de5fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lastPosition: {x: 0, y: 0}
+  lastParent: {fileID: 0}
 --- !u!225 &-1998855537877883296
 CanvasGroup:
   m_ObjectHideFlags: 0

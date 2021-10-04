@@ -4,37 +4,65 @@ using UnityEngine;
 
 public class TodoSystem : MonoBehaviour
 {
-    private GameObject[] folderit;
     public List<GameObject> folders = new List<GameObject>();
 
     public int rng;
 
     public GameObject theChosenOne;
     public GameObject mukarandom;
+    public GameObject folderObject;
 
     public GameObject[] postitNotes;
-    void Start()
+
+    [SerializeField]
+    GameObject spagetti;
+
+    private void Start()
     {
-        CreateTask();
+        StartCoroutine(CreateTaskObject());
     }
 
     public void CreateTask()
     {
         // Task object spawn system
-        folderit = GameObject.FindGameObjectsWithTag("Folder");
 
-        foreach (GameObject a in folderit)
+        int rng4 = Random.Range(0, 1);
+
+        foreach (var folder in GameObject.FindGameObjectsWithTag("Folder"))
         {
-            folders.Add(a.gameObject);
+            folders.Add(folder);
         }
 
-        rng = Random.Range(0, folders.Count);
-        theChosenOne = folders[rng];
-        GameObject.Instantiate(mukarandom, theChosenOne.transform);
+        if (GameObject.FindGameObjectsWithTag("Folder").Length > 0 && rng4 == 0)
+        {
+            Debug.Log(GameObject.FindGameObjectsWithTag("Folder").Length);
+            rng = Random.Range(0, folders.Count);
+            theChosenOne = folders[rng];
+            GameObject.Instantiate(mukarandom, theChosenOne.transform);
+            spagetti = theChosenOne;
+            Debug.Log("if", this);
+        }
+        else
+        {
+            spagetti = GameObject.Instantiate(folderObject);
 
-        // Post-it note spawn system        
+            Debug.Log("else", this);
+
+        }
+
+
+        // Post-it note spawn system
         int rng2 = Random.Range(0, 2);
         int rng3 = Random.Range(0, gameObject.transform.childCount);
-        GameObject.Instantiate(postitNotes[rng2], gameObject.transform.GetChild(rng3));
+        GameObject postilappu = GameObject.Instantiate(postitNotes[rng2], gameObject.transform.GetChild(rng3));
+        spagetti.GetComponent<FileSystemManager>().content.Add(mukarandom);
+        spagetti.GetComponent<FileSystemManager>().postilappu = postilappu;
+    }
+
+    IEnumerator CreateTaskObject()
+    {
+        Debug.Log("CreateTask", this);
+        CreateTask();
+        yield return new WaitForSeconds(10);
     }
 }

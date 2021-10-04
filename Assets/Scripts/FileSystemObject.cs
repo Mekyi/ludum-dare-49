@@ -37,6 +37,7 @@ public class FileSystemObject : MonoBehaviour
         fileSystemObject.objectName = name;
         fileSystemObject.name = name;
         fileSystemObject.type = newFolderContentType;
+        //fileSystemObject.folderContent = newFolderContent;
         Debug.Log(newFileSystemObject.GetComponent<FileSystemObject>().type);
 
         if (index >= 0)

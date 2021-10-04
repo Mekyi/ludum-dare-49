@@ -148,6 +148,7 @@ GameObject:
   - component: {fileID: 7039053486789742326}
   - component: {fileID: 3377470808498456521}
   - component: {fileID: 6244677760284333761}
+  - component: {fileID: -4169793085442004453}
   m_Layer: 5
   m_Name: mukarandom
   m_TagString: Untagged
@@ -255,3 +256,18 @@ MonoBehaviour:
   objectName: File
   folderContent: []
   newFileSystemObjectPrefab: {fileID: 0}
+--- !u!114 &-4169793085442004453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6765947138433804588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6212b6733bfd3340b594da87cec6d1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goal: {fileID: 0}
+  maalitaulu: {fileID: 0}
+  todoLappu: {fileID: 0}

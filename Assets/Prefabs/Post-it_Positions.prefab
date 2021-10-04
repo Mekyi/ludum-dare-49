@@ -489,6 +489,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7244844643149643295}
+  - component: {fileID: 1575364220}
   m_Layer: 0
   m_Name: Post-it_Positions
   m_TagString: Untagged
@@ -527,6 +528,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1575364220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7244844643149643292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f90411cf7537fb04293f7319d226abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  folders: []
+  rng: 0
+  theChosenOne: {fileID: 0}
+  mukarandom: {fileID: 6765947138433804588, guid: 59116a9b8a86fd74abe542abcea7cfb7, type: 3}
+  postitNotes:
+  - {fileID: 3047973664776282758, guid: 7b0ddf028bb042740992483924d24f40, type: 3}
+  - {fileID: 2379766085380881471, guid: ccd38d40ed74ecd45b8a49c6003fa125, type: 3}
+  - {fileID: 6575618639595935885, guid: 25e6da047cf2ee34c98ae03b769a761d, type: 3}
 --- !u!1 &7244844643372251105
 GameObject:
   m_ObjectHideFlags: 0

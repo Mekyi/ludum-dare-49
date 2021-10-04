@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 6244677760284333761}
   m_Layer: 5
   m_Name: File
-  m_TagString: Untagged
+  m_TagString: File System Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -225,6 +225,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f6f738d51c632c4787a7403455de5fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lastPosition: {x: 0, y: 0}
+  lastParent: {fileID: 0}
 --- !u!225 &3377470808498456521
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -252,5 +254,4 @@ MonoBehaviour:
   type: 0
   objectName: File
   folderContent: []
-  newFilePrefab: {fileID: 6765947138433804588}
-  newFolderPrefab: {fileID: 1691371761508075653, guid: 6cc64287d7cc472479427c31b89b0600, type: 3}
+  newFileSystemObjectPrefab: {fileID: 0}
